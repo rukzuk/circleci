@@ -7,7 +7,9 @@ RUN sudo apt-get update && \
           libfreetype6-dev \
           libjpeg62-turbo-dev \
           libcurl4-openssl-dev \
-          libsqlite3-dev
+          libsqlite3-dev \
+          libmcrypt-dev
+RUN sudo docker-php-ext-install mcrypt
 RUN sudo docker-php-ext-install gd
 RUN sudo docker-php-ext-install curl
 RUN sudo docker-php-ext-install calendar
